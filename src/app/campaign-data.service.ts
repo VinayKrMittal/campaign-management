@@ -11,79 +11,102 @@ export class CampaignDataService {
       {
         date:"2017-05-01",
         name : "Whatsapp",
-        icon:'fa fa-whatsapp',
+        icon:'fa fa-whatsapp fa-2x',
         country: 'US',
-        view:'sample'
+        view:'sample',
+        iconColor : 'green'
       }, {
         date:"2017-05-02",
         name : "Test",
-        icon:'fa fa-tumblr',
+        icon:'fa fa-skype fa-2x',
         country: 'IN',
-        view:'sample'
+        view:'sample',
+        iconColor : 'red'
+
       }, {
         date:"2017-05-03",
         name : "Facebook",
-        icon:'fa fa-skype',
+        icon:'fa fa-skype fa-2x',
         country: 'FB',
-        view:'sample'
+        view:'sample',
+        iconColor : 'yellow'
+
       }, {
         date:"2017-05-04",
         name : "Sample",
-        icon:'',
         country: 'SM',
-        view:'sample'
+        view:'sample',
+        icon:'fa fa-whatsapp fa-2x',
+        iconColor : 'green'
       }    ],
       'two':[
         {
           date:"2017-06-01",
           name : "Whatsapp1",
-          icon:'',
+          icon:'fa fa-whatsapp fa-2x',
           country: 'US',
-          view:'sample'
+          view:'sample',
+          iconColor : 'green'
+
         }, {
           date:"2017-07-02",
           name : "Test1",
-          icon:'',
+          icon:'fa fa-whatsapp fa-2x',
           country: 'IN',
-          view:'sample'
+          view:'sample',
+          iconColor : 'green'
+
         }, {
           date:"2017-06-03",
           name : "Facebook1",
-          icon:'',
+          icon:'fa fa-skype fa-2x',
           country: 'FB',
-          view:'sample'
+          view:'sample',
+          iconColor : 'green'
+
         }, {
           date:"2017-06-04",
           name : "Sample1",
-          icon:'',
+          icon:'fa fa-skype fa-2x',
           country: 'SM',
-          view:'sample'
+          view:'sample',
+          iconColor : 'green'
+
         }    ],
         'three':[
           {
             date:"2017-07-01",
             name : "Whatsapp2",
-            icon:'',
+            icon:'fa fa-skype fa-2x',
             country: 'US',
-            view:'sample'
+            view:'sample',
+            iconColor : 'green'
+
+
           }, {
             date:"2017-08-02",
             name : "Test1",
-            icon:'',
+            icon:'fa fa-skype fa-2x',
             country: 'IN1',
-            view:'sample'
+            view:'sample',
+            iconColor : 'blue'
+
           }, {
             date:"2017-06-03",
             name : "Facebook2",
-            icon:'',
+            icon:'fa fa-skype fa-2x',
             country: 'FB',
-            view:'sample'
+            view:'sample',
+            iconColor : 'red'
+
           }, {
             date:"2017-06-04",
             name : "Sample1",
-            icon:'',
+            icon:'fa fa-skype fa-2x',
             country: 'SM1',
-            view:'sample'
+            view:'sample',
+            iconColor : 'red'
+
           }    ]
 
   };

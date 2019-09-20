@@ -12,10 +12,10 @@
 </div>
 
 <div>
-  <div class="c-heading">Manage Campaigns</div>
+  <div class="c-heading">Manage <span class="h-p-2">Campaigns</span></div>
   <div class="compaign-types-container d-flex c-subtypes">
-      <button type="button" [className]="selected == 'one' ? 'btn btn-bg' : 'btn bg-info'" (click)="onRadioChange('one')">Upcoming Campaign</button>
-      <button type="button"  [className]="selected == 'two' ? 'btn btn-bg' : 'btn bg-info'" (click)="onRadioChange('two')">Live Campaign</button>
+      <button type="button" [className]="selected == 'one' ? 'btn btn-bg' : 'btn bg-info'" (click)="onRadioChange('one')" style="margin-right: 12px">Upcoming Campaign</button>
+      <button type="button"  [className]="selected == 'two' ? 'btn btn-bg' : 'btn bg-info'" (click)="onRadioChange('two')" style="margin-right: 12px">Live Campaign</button>
       <button type="button" [className]="selected == 'three' ? 'btn btn-bg' : 'btn bg-info'" (click)="onRadioChange('three')">Past Campaign</button>
 
     <!-- <div class="form-group mr-lg custom-input" [className]="selected == 'one' ? 'bg-color' : ''">
@@ -56,17 +56,36 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of campaignData">
+          <tr *ngFor="let item of campaignData" (click)="openModal(template,item)">
             <td class="W-150" >{{item.date}}<br>
               <span class="sub-text">{{getDays(item.date)}} days ago</span>
             </td>
-            <td class="W-150" ><i class="{{item.icon}}" aria-hidden="true"></i>{{item.name}}</td>
+            <td class="W-150" ><i class="{{item.icon}} {{item.iconColor}}" aria-hidden="true" style="padding-right: 7px;"></i>{{item.name}} 
+            <br><span style="font-size: 12px;">{{item.country}}</span></td>
             <td class="W-150" ><i class="fa fa-pinterest" aria-hidden="true"></i><br>
               {{item.view}}</td>
-            <td class="W-150" >{{item.name}}
+            <td class="W-150" ><i class="fa fa-file-text-o" aria-hidden="true"></i>
+              <span style="padding-left: 10px;"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+              </span>
             </td>
           </tr>
         </tbody>
       </table>
 </div>
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Campaign Data</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li>Campaign: {{modalData.name}}</li>
+        <li>Date: {{modalData.date}}</li>
+        <li>Country: {{modalData.country}}</li>
+        <li>View : {{modalData.view}}</li>
+      </ul>
+    </div>
+  </ng-template>
 <router-outlet></router-outlet>

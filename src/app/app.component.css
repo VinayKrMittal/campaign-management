@@ -23,11 +23,13 @@
 }
 
 .c-subtypes{
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     height: 31px;
+    justify-content: center;
 }
 .th-bg{
-    background-color: grey;
+    background-color: #8080802e;
+    color: #00000085;
 }
 .mt-20{
     margin-top: 20px;
@@ -38,7 +40,7 @@
 }
 
 .h-32{
-    height: 32px;
+    height: 30px;
 }
 
 .spacer {
@@ -73,5 +75,31 @@
   }
 
   .btn-bg{
-    border: 1px solid #3ea2b8;
+    border: 1px solid #57a954;
   }
+
+  .bg-info {
+    background-color: #58a954!important;
+    color: white;
+}
+
+.h-p-2{
+    color: #030331;
+    font-weight: 700;
+}
+
+.green{
+    color: green;
+}
+
+.yellow{
+    color: yellow;
+}
+
+.blue{
+    color: blue;
+}
+
+.red{
+    color: red;
+}

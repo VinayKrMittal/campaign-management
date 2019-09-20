@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,TemplateRef } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { CampaignDataService } from './campaign-data.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,10 @@ export class AppComponent implements OnInit {
   title = 'manage-campaign';
   selected = 'one';
   campaignData = [];
-  constructor(private campaign_data: CampaignDataService) {
+  modalRef: BsModalRef;
+  modalData :object = null;
+
+  constructor(private campaign_data: CampaignDataService,private modalService: BsModalService) {
   }
   onRadioChange(type) {
     this.selected = type;
@@ -28,6 +33,11 @@ export class AppComponent implements OnInit {
     let timeDiff = d2.getTime() - d1.getTime();
     let daysDiff = timeDiff / (1000 * 3600 * 24);
     return Math.floor(daysDiff);
+  }
+
+  openModal(template: TemplateRef<any>,data) {
+    this.modalData = data;
+    this.modalRef = this.modalService.show(template);
   }
 
   ngOnInit(): void {
