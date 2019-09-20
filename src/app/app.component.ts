@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   selected = 'one';
   campaignData = [];
   modalRef: BsModalRef;
-  modalData :object = null;
+  modalData :any = null;
 
   constructor(private campaign_data: CampaignDataService,private modalService: BsModalService) {
   }
