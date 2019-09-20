@@ -14,7 +14,11 @@
 <div>
   <div class="c-heading">Manage Campaigns</div>
   <div class="compaign-types-container d-flex c-subtypes">
-    <div class="form-group mr-lg custom-input" [className]="selected == 'one' ? 'bg-color' : ''">
+      <button type="button" [className]="selected == 'one' ? 'btn btn-bg' : 'btn bg-info'" (click)="onRadioChange('one')">Upcoming Campaign</button>
+      <button type="button"  [className]="selected == 'two' ? 'btn btn-bg' : 'btn bg-info'" (click)="onRadioChange('two')">Live Campaign</button>
+      <button type="button" [className]="selected == 'three' ? 'btn btn-bg' : 'btn bg-info'" (click)="onRadioChange('three')">Past Campaign</button>
+
+    <!-- <div class="form-group mr-lg custom-input" [className]="selected == 'one' ? 'bg-color' : ''">
       <input  type="radio" class="Compaign"  name="compaign" id="one" [value]="one" [(ngModel)]="selected" (change)="onRadioChange('one')">
       <label for="compaign" class="text-center p b">
         <p class="text-sm m0">
@@ -37,7 +41,7 @@
           <span>Past Compaign</span>
         </p>
       </label>
-    </div>
+    </div> -->
   </div>
 
                                                                                       
@@ -59,7 +63,8 @@
             <td class="W-150" ><i class="{{item.icon}}" aria-hidden="true"></i>{{item.name}}</td>
             <td class="W-150" ><i class="fa fa-pinterest" aria-hidden="true"></i><br>
               {{item.view}}</td>
-            <td class="W-150" >{{item.name}}</td>
+            <td class="W-150" >{{item.name}}
+            </td>
           </tr>
         </tbody>
       </table>
