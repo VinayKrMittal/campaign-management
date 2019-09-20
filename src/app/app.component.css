@@ -23,7 +23,8 @@
 }
 
 .c-subtypes{
-    justify-content: space-evenly
+    justify-content: space-evenly;
+    height: 31px;
 }
 .th-bg{
     background-color: grey;
@@ -66,3 +67,9 @@
       visibility: hidden;
     }
   }
+
+  .sub-text{
+    font-size: 11px;
+  }
+
+  

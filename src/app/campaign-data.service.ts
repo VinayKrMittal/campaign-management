@@ -11,19 +11,19 @@ export class CampaignDataService {
       {
         date:"2017-05-01",
         name : "Whatsapp",
-        icon:'',
+        icon:'fa fa-whatsapp',
         country: 'US',
         view:'sample'
       }, {
         date:"2017-05-02",
         name : "Test",
-        icon:'',
+        icon:'fa fa-tumblr',
         country: 'IN',
         view:'sample'
       }, {
         date:"2017-05-03",
         name : "Facebook",
-        icon:'',
+        icon:'fa fa-skype',
         country: 'FB',
         view:'sample'
       }, {

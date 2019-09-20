@@ -54,12 +54,12 @@
         <tbody>
           <tr *ngFor="let item of campaignData">
             <td class="W-150" >{{item.date}}<br>
-              <span>{{getDays(item.date)}} days ago</span>
+              <span class="sub-text">{{getDays(item.date)}} days ago</span>
             </td>
+            <td class="W-150" ><i class="{{item.icon}}" aria-hidden="true"></i>{{item.name}}</td>
+            <td class="W-150" ><i class="fa fa-pinterest" aria-hidden="true"></i><br>
+              {{item.view}}</td>
             <td class="W-150" >{{item.name}}</td>
-            <td class="W-150" >{{item.name}}</td>
-            <td class="W-150" >{{item.name}}</td>
-
           </tr>
         </tbody>
       </table>
