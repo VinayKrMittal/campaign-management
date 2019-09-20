@@ -103,3 +103,7 @@
 .red{
     color: red;
 }
+
+.table td, .table th{
+    padding: 4px
+}
